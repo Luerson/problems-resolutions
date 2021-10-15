@@ -2,13 +2,9 @@
 
 int main(){
     double hotdogs, participantes;
-    double media;
 
     scanf("%lf %lf", &hotdogs, &participantes);
-
-    media = hotdogs / participantes;
-
-    printf("%.2lf\n", media);
+    printf("%.2lf\n", hotdogs / participantes);
 
     return 0;
 }
