@@ -2,19 +2,23 @@
 
 int main(){
     int nValores, valorX;
-    int i, contador = 0;
+    int out, in;
 
+    in = out = 0;
+    
     scanf("%d", &nValores);
 
-    for(i = 0; i < nValores; i++){
+    while(nValores--){
         scanf("%d", &valorX);
         
         if(valorX >= 10 && valorX <= 20){
-            contador++;
+            in++;
+        }else{
+            out++;
         }
     }
 
-    printf("%d in\n%d out\n", contador, i - contador);
+    printf("%d in\n%d out\n", in, out);
 
     return 0;
 }

@@ -1,12 +1,12 @@
 #include <stdio.h>
 
 int main(){
-    int valorX, i, fatorial = 1;
+    int valorX, fatorial = 1;
 
     scanf("%d", &valorX);
 
-    for(i = 1; i <= valorX; i++){
-        fatorial *= i;
+    while(valorX--){
+        fatorial *= valorX + 1;
     }
 
     printf("%d\n", fatorial);
