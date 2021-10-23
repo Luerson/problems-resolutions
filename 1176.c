@@ -2,11 +2,13 @@
 
 /**
  * @brief Esta função calcula o valor de fibonacci em uma determinada posição
+ * 
  * @param posicao corresponde à posição na sequência de fibonacci do valor que
  * se quer calcular. '0' = primeira posição, '1' = segunda posição...
+ * 
  * @return valores naturais da sequência de fibonacci
  */
-unsigned long long ValorDaPosicao(posicao){
+unsigned long long ValorDaPosicao(int posicao){
     unsigned long long novo = 1, anterior = 0;
 
     if(posicao == 0){
@@ -20,7 +22,6 @@ unsigned long long ValorDaPosicao(posicao){
         anterior = novo - anterior;
     }
     
-
     return novo;
 }
 
