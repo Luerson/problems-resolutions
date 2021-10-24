@@ -1,11 +1,12 @@
 #include <stdio.h>
 
 /**
- * @brief esta função 
+ * @brief esta função calcula se um numero é primo ou não
  * 
- * @param numero 
+ * @param numero valor a ser verificado se é ou não primo
  * 
- * @return int 
+ * @return '1' caso o valor seja primo,
+ *         '0' caso valor não seja primo
  */
 int EhPrimo(int numero){
     int i, contador;
