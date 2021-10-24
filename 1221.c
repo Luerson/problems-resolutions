@@ -1,21 +1,37 @@
 #include <stdio.h>
 
+/**
+ * @brief esta função 
+ * 
+ * @param numero 
+ * 
+ * @return int 
+ */
+int EhPrimo(int numero){
+    int i, contador;
+
+    for(i = 1; i*i <= numero && contador < 2; i++){
+        if(numero % i == 0){
+            contador++;
+        }
+    }
+
+    if(contador == 1 && numero != 1){
+        return 1;
+    }else{
+        return 0;
+    }
+}
+
 int main(){
-    int valorN, i, contador, valorX;
+    int valorN, valorX;
 
     scanf("%d", &valorN);
 
     while(valorN--){
         scanf("%d", &valorX);
-        contador = 0;
 
-        for(i = 1; i*i <= valorX && contador < 2; i++){
-            if(valorX % i == 0){
-                contador++;
-            }
-        }
-
-        if(contador == 1){
+        if(EhPrimo(valorX)){
             printf("Prime\n");
         }else{
             printf("Not Prime\n");
