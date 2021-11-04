@@ -9,7 +9,7 @@
  * 
  * @return retorna o peso total dos grãos em quilos(Kg) 
  */
-unsigned long long GraosNoTabuleiro(unsigned long long nCasas){
+unsigned long long GraosNoTabuleiro(const unsigned long long nCasas){
     unsigned long long graos;
 
     graos = pow(2, nCasas) - 1;
