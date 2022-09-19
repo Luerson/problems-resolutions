@@ -1,1 +1,1 @@
-# URIresolutions.C
+# beecrowd_resolutions
