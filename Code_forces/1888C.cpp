@@ -43,26 +43,46 @@ int main() {
     std::ios::sync_with_stdio(0);
     cin.tie(0);
 
-
     int t;
     cin >> t;
     while (t--) {
         int n;
+        ll total = 0;
         cin >> n;
 
-
         int valores[n];
+        map<int, int> lastOccur;
+        map<int, int> firstOccur;
 
 
         for (int i = 0; i < n; i++) {
             int valor;
 
-
             cin >> valor;
-
 
             valores[i] = valor;
         }
+
+        for (int i = 0; i < n; i++) {
+            lastOccur[valores[i]] = i;
+        }
+
+        for (int i = n-1; i >= 0; i--) {
+            firstOccur[valores[i]] = i;
+        }
+
+        for (int i = 0; i < n; i++) {
+            if (firstOccur[valores[i]] == i) {
+                total += lastOccur.size();
+            }
+
+            if (lastOccur[valores[i]] == i) {
+                lastOccur.erase(valores[i]);
+            }
+        }
+
+        cout << total << endl;
     }
+
     return 0;
 }
