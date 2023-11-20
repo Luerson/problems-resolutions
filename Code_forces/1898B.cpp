@@ -22,6 +22,23 @@ vector<int> valores;
 // variáveis do problema
 int n;
 
+ll solve()
+{
+    ll sum = 0;
+
+    for (int i = n - 2; i >= 0; i--)
+    {
+        if (valores[i] > valores[i + 1])
+        {
+            int k = valores[i] / valores[i + 1] + (valores[i] % valores[i + 1] != 0);
+            valores[i] = valores[i] / k;
+            sum += k - 1;
+        }
+    }
+
+    return sum;
+}
+
 int main()
 {
     ios_base::sync_with_stdio(0);
@@ -31,16 +48,18 @@ int main()
     cin >> t;
     while (t--)
     {
+        int total = 0;
         cin >> n;
+        valores.clear();
+
+        valores.resize(n);
 
         for (int i = 0; i < n; i++)
         {
-            int valor;
-
-            cin >> valor;
-
-            valores.push_back(n);
+            cin >> valores[i];
         }
+
+        cout << solve() << endl;
     }
     return 0;
 }
